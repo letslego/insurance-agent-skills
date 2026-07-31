@@ -1,0 +1,111 @@
+$ agent --print --trust --workspace intake-triage-demo
+> /intake-and-triage
+> Use SAMPLE_CLAIM.md. Walk collect → coverage → fraud → route/escalate.
+> Show which skill you use at each step.
+
+## Skill: /intake-and-triage (orchestrator)
+Running the intake-and-triage loop on fictional sample claim PA-4482910-22.
+Decision support only — not a coverage determination or SIU finding.
+
+────────────────────────────────────────
+## Step 1 — /fnol-intake (collect claim details)
+────────────────────────────────────────
+
+**FNOL summary**
+- Named insured / reporter: Jordan Lee (policyholder)
+- Policy: PA-4482910-22 (personal auto)
+- Contact: 555-0148
+- Loss datetime: Saturday ~9:40pm (caller initially said Friday — corrected)
+- Location: parking lot behind Metro Grocery, 1800 Harbor St
+- Narrative: Insured inside store; returned to find dark gray SUV (possible Toyota) had backed into 2022 Honda Civic. Other driver identified as "Chris Morgan," phone on napkin, no insurance card photo. Plate partial: starts with "7X," state unknown.
+- Damage: front bumper cover cracked, left headlight out, airbags not deployed, vehicle driveable with dark headlight
+- Injuries: none reported
+- Police: not called
+- Photos: promised, not received
+
+**Parties / units**
+- Unit 1: 2022 Honda Civic (insured)
+- Unit 2: dark gray SUV, maybe Toyota (adverse) — identity incomplete
+
+**Immediate needs**
+- Rental requested “just in case”
+- Body/headlight repair path; roadside not requested
+
+**Missing facts**
+- Exact loss date confirmation (Fri vs Sat)
+- Adverse carrier/policy/photos of ID & insurance
+- Full plate / state; scene photos; store camera possibility
+- Verify internal flag: phone 555-0148 on glass claim 3 weeks ago under different name/state
+
+**Suggested next:** /coverage-determination
+
+────────────────────────────────────────
+## Step 2 — /coverage-determination (verify coverage)
+────────────────────────────────────────
+
+| Issue | Policy reference (excerpt) | Fact | Conclusion |
+|-------|----------------------------|------|------------|
+| Vehicle / insured match | Named insured Jordan Lee; 2022 Civic | Matches FNOL | Proceed |
+| Policy period | 01/01/2026–01/01/2027 | Loss “Saturday ~9:40pm” — calendar date not fixed | **Investigate** — confirm date in period |
+| Hit-and-run / uninsured other vehicle in lot | Comp $500; Collision $1000 | Other vehicle present but ID thin; may be parking-lot / backing incident | **Partial / investigate** — collision vs comprehensive depends on contact facts & adverse ID; do not invent form language |
+| Rental | $30/day, 30-day max | Requested prophylactically; vehicle driveable | Available if covered repair downtime — subject to coverage acceptance |
+| Liability to third parties | BI/PD 100/300/100 | No injury/property claim against insured alleged | Not primary issue this notice |
+
+**Coverage posture:** Investigate / provisional first-party property track pending loss-date confirmation and better adverse-vehicle facts.  
+**Open questions:** Exact date; collision vs comprehensive treatment under carrier guidelines (not in excerpt); photos.  
+**Customer-safe line:** “We’re confirming the loss date and gathering the other driver’s details/photos so we can apply the right coverage and deductible.”
+
+────────────────────────────────────────
+## Step 3 — /fraud-red-flags (detect fraud signals)
+────────────────────────────────────────
+
+**Indicators (facts only)**
+1. Loss date corrected Friday → Saturday
+2. Adverse party: napkin phone, no insurance card photo, partial plate only
+3. Internal search flag: same phone on recent glass claim, different name/state (unverified)
+4. Photos promised but not received
+5. No police report on parking-lot collision with unidentified adverse
+
+**Inconsistencies:** Date story changed once; third-party identity incomplete.
+
+**Referral recommendation:** **Monitor → prepare SIU refer if phone-collision flag confirms or identity cannot be substantiated after ordinary investigation.**  
+Do not accuse the customer. Language for SIU packet: list indicators above only.
+
+**What NOT to say to customer:** “fraud,” “SIU,” “staged.”
+
+────────────────────────────────────────
+## Step 4 — /severity-triage + /handoff-brief (route / escalate)
+────────────────────────────────────────
+
+### /severity-triage
+- **Severity band:** Moderate repair (bumper + headlight; driveable; no airbags; no injury)
+- **Handling track:** Desk/DRP photo estimate path; rental only if repairs remove vehicle from service
+- **Watch items:** Identity of Unit 2; date confirmation; phone-number collision flag; photo chase
+- **Special handling:** Potential SIU monitor; not CAT; not attorney-present
+
+### /handoff-brief
+**From → to:** Intake desk → Appraiser/DRP + Claims ownership; SIU on standby if flag confirms  
+**Abstract:** Parking-lot backing into Civic; thin adverse ID; first-party damage; date inconsistency; phone reuse flag.  
+**Done:** FNOL structured; provisional coverage posture; fraud screen complete.  
+**Needed:** Confirm loss date; obtain photos; verify phone-flag; attempt adverse insurance ID.  
+**Landmines:** Customer asked about speed of repairs/rental; avoid fraud language.  
+**Ask + due:** Owner adjuster — photo/estimate assignment within 1 business day; SIU consult if phone flag verified within 48 hours.
+
+────────────────────────────────────────
+## Final intake-and-triage package
+────────────────────────────────────────
+
+Claim / policy refs: PA-4482910-22 / Jordan Lee / 2022 Honda Civic  
+FNOL abstract: Parking-lot backing damage; adverse “Chris Morgan” thinly identified; bumper + left headlight; no injury; no police.  
+Coverage posture: Investigate / provisional first-party property (confirm date; collision vs comp per guidelines)  
+Fraud posture: Monitor (date change, thin adverse ID, unverified phone collision, missing photos)  
+Severity / handling track: Moderate repair — DRP/photo estimate  
+Route decision: Desk adjuster + DRP; SIU standby if phone flag confirms  
+Escalation ask: Verify phone-collision flag; SIU refer only if substantiated  
+Subjectivities / missing facts: Exact date, photos, adverse insurance/plate, phone-flag verification  
+Next owner + due: Claim owner — 1 business day for inspection path  
+Customer-safe next-step line: “Please send photos of the damage and confirm the exact loss date; we’ll start the estimate and check rental if the car needs shop time.”
+
+Workflow stitch complete:
+/fnol-intake → /coverage-determination → /fraud-red-flags → /severity-triage → /handoff-brief
+under orchestrator /intake-and-triage

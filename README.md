@@ -21,9 +21,23 @@ Works with **Claude Code**, **Codex**, **Cursor**, and any [Agent Skills](https:
 
 ---
 
-## Video tour
+## Workflow demo — intake & triage
 
-Narrated walkthrough of all **39 skills** (~12 min): when to use each one, and which skills to pair with it.
+Silent capture + studio voiceover of installing skills and stitching an **intake-and-triage** agent:
+
+`/fnol-intake` → `/coverage-determination` → `/fraud-red-flags` → `/severity-triage` → `/handoff-brief`
+
+[![Watch the intake-and-triage workflow demo](docs/video/workflow-intake-triage/poster.jpg)](https://letslego.github.io/insurance-agent-skills/#intake-and-triage-demo)
+
+<p align="center">
+  <a href="https://letslego.github.io/insurance-agent-skills/#intake-and-triage-demo"><strong>▶ Watch on GitHub Pages</strong></a>
+  &nbsp;·&nbsp;
+  <a href="https://letslego.github.io/insurance-agent-skills/video/workflow-intake-triage/intake-and-triage-workflow-demo.mp4"><strong>Play / download MP4</strong></a>
+</p>
+
+## Skills catalog video
+
+Narrated walkthrough of all skills (~12 min): when to use each one, and which skills to pair with it.
 
 [![Watch the Insurance Agent Skills video tour](docs/video/poster.jpg)](https://letslego.github.io/insurance-agent-skills/#video)
 
