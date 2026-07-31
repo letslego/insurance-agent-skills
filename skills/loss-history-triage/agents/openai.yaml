@@ -1,0 +1,3 @@
+interface:
+  display_name: "Loss History Triage"
+  short_description: "Loss runs and claims triage"

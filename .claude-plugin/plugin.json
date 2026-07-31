@@ -1,0 +1,35 @@
+{
+  "name": "insurance-underwriting",
+  "version": "1.0.0",
+  "description": "Insurance underwriting skills for submission review, appetite fit, losses, hazards, terms, pricing, authority, and decision memos.",
+  "author": {
+    "name": "letslego",
+    "url": "https://github.com/letslego/insurance-underwriting-skills"
+  },
+  "homepage": "https://letslego.github.io/insurance-underwriting-skills/",
+  "repository": "https://github.com/letslego/insurance-underwriting-skills",
+  "license": "MIT",
+  "keywords": [
+    "insurance",
+    "underwriting",
+    "risk",
+    "pricing",
+    "appetite",
+    "renewals",
+    "skills"
+  ],
+  "skills": [
+    "./skills/ask-underwriter",
+    "./skills/underwrite-submission",
+    "./skills/risk-appetite-check",
+    "./skills/loss-history-triage",
+    "./skills/financial-strength-review",
+    "./skills/hazard-exposure-analysis",
+    "./skills/coverage-terms-review",
+    "./skills/pricing-rationale",
+    "./skills/referral-authority",
+    "./skills/underwriting-decision-memo",
+    "./skills/broker-rfi",
+    "./skills/renewal-comparison"
+  ]
+}
