@@ -1,0 +1,3 @@
+interface:
+  display_name: "Coverage Determination"
+  short_description: "Map claim facts to coverage conclusions"

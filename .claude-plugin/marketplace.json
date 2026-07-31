@@ -1,22 +1,22 @@
 {
-  "name": "insurance-underwriting-skills",
+  "name": "insurance-agent-skills",
   "owner": {
     "name": "letslego",
     "url": "https://github.com/letslego"
   },
-  "description": "Insurance underwriting agent skills for Claude Code, Codex, and Cursor.",
+  "description": "Insurance agent skills for Claude Code, Codex, and Cursor \u2014 underwriting, claims, customer, compliance, and more.",
   "plugins": [
     {
-      "name": "insurance-underwriting",
+      "name": "insurance-agent-skills",
       "source": "./",
-      "description": "Insurance underwriting skills — submission review, appetite, losses, hazards, terms, pricing, authority, and decision memos.",
+      "description": "Full insurance desk skill pack: underwriting, claims, customer, personal lines, compliance, analytics, knowledge.",
       "category": "productivity",
       "keywords": [
         "insurance",
+        "claims",
         "underwriting",
-        "risk",
-        "pricing",
-        "appetite"
+        "customer-service",
+        "compliance"
       ]
     }
   ]

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Fraud Red Flags"
+  short_description: "Screen for SIU referral indicators"

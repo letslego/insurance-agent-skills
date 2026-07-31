@@ -1,0 +1,3 @@
+interface:
+  display_name: "Nonrenew Rationale"
+  short_description: "Document non-renewal and adverse action rationale"

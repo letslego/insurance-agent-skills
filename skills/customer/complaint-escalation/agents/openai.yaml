@@ -1,0 +1,3 @@
+interface:
+  display_name: "Complaint Escalation"
+  short_description: "Structure complaint and escalation handling"

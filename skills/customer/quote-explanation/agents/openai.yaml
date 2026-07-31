@@ -1,0 +1,3 @@
+interface:
+  display_name: "Quote Explanation"
+  short_description: "Explain quote price and rate changes simply"

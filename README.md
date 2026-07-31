@@ -1,36 +1,23 @@
 <p align="center">
-  <strong>Underwriter Skills</strong><br/>
-  Agent skills that work a file the way a desk underwriter does.
+  <strong>Insurance Agent Skills</strong><br/>
+  Agent skills for the modern insurance desk — underwriting, claims, customer, compliance, and more.
 </p>
 
 <p align="center">
-  <a href="https://letslego.github.io/insurance-underwriting-skills/"><img src="https://img.shields.io/badge/docs-GitHub%20Pages-0B3D5C?style=flat-square" alt="Docs" /></a>
+  <a href="https://letslego.github.io/insurance-agent-skills/"><img src="https://img.shields.io/badge/docs-GitHub%20Pages-0B3D5C?style=flat-square" alt="Docs" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-2F6F6A?style=flat-square" alt="MIT" /></a>
-  <a href="https://github.com/letslego/insurance-underwriting-skills"><img src="https://img.shields.io/badge/skills-12-C45C26?style=flat-square" alt="12 skills" /></a>
+  <a href="https://github.com/letslego/insurance-agent-skills"><img src="https://img.shields.io/badge/skills-39-C45C26?style=flat-square" alt="39 skills" /></a>
 </p>
 
-# Underwriter Skills
+# Insurance Agent Skills
 
-Twelve installable agent skills for **insurance underwriting** — submission intake, appetite fit, losses, hazards, financial strength, coverage terms, pricing, authority/referral, broker RFIs, renewals, and decision memos.
+Thirty-nine installable agent skills for carriers and agencies — built for personal-lines-heavy desks (think GEICO-style volume) and still useful for commercial underwriting files.
 
-Built for Claude Code, Codex, Cursor, and any agent that speaks the [Agent Skills](https://agentskills.io/) format.
+Works with **Claude Code**, **Codex**, **Cursor**, and any [Agent Skills](https://agentskills.io/) harness.
 
-**Docs site:** [letslego.github.io/insurance-underwriting-skills](https://letslego.github.io/insurance-underwriting-skills/)
+**Docs:** [letslego.github.io/insurance-agent-skills](https://letslego.github.io/insurance-agent-skills/)
 
-> **Decision support only.** These skills do not grant binding authority and are not legal, actuarial, or compliance advice. Always apply your carrier’s guidelines, authority matrix, and local regulations.
-
----
-
-## Why this pack
-
-Most coding-agent skills optimize for software. Underwriters optimize for a different loop: **facts → exposure → appetite → terms → price → authority → written decision**.
-
-This pack encodes that loop as small, composable skills you can invoke one at a time — or run end-to-end with `/underwrite-submission`.
-
-```text
-Intake → Appetite → Losses / Hazards / Financials
-      → Terms → Price → Authority → Memo / RFI / Renewal
-```
+> **Decision support only.** Not binding authority, legal advice, actuarial certification, or a substitute for carrier guidelines, your authority matrix, or licensed judgment.
 
 ---
 
@@ -38,80 +25,117 @@ Intake → Appetite → Losses / Hazards / Financials
 
 ### Claude Code
 
+In a Claude Code session:
+
 ```text
-/plugin marketplace add letslego/insurance-underwriting-skills
-/plugin install insurance-underwriting@insurance-underwriting-skills
+/plugin marketplace add letslego/insurance-agent-skills
+/plugin install insurance-agent-skills@insurance-agent-skills
 /reload-plugins
 ```
 
-Then run slash commands such as `/underwrite-submission` or `/ask-underwriter`.
+Then start with `/ask-insurance`, or jump straight to a skill like `/fnol-intake` or `/underwrite-submission`.
 
 CLI:
 
 ```bash
-claude plugin marketplace add letslego/insurance-underwriting-skills
-claude plugin install insurance-underwriting@insurance-underwriting-skills
+claude plugin marketplace add letslego/insurance-agent-skills
+claude plugin install insurance-agent-skills@insurance-agent-skills
 ```
 
 ### Codex
 
-**Editable install (skills.sh):**
+**Recommended — skills.sh:**
 
 ```bash
-npx skills@latest add letslego/insurance-underwriting-skills
+npx skills@latest add letslego/insurance-agent-skills
 ```
 
-**Native plugin:** clone the repo and enable **Insurance Underwriting** from Codex `/plugins`, or add the local marketplace at [`.agents/plugins/marketplace.json`](.agents/plugins/marketplace.json). Plugin manifest: [`.codex-plugin/plugin.json`](.codex-plugin/plugin.json).
+**Native Codex plugin:** clone this repo, open Codex `/plugins`, and enable **Insurance Agent Skills** (manifest: [`.codex-plugin/plugin.json`](.codex-plugin/plugin.json)). Local marketplace: [`.agents/plugins/marketplace.json`](.agents/plugins/marketplace.json).
 
-### Cursor / other agents
+### Cursor and other agents
 
 ```bash
-npx skills@latest add letslego/insurance-underwriting-skills
+npx skills@latest add letslego/insurance-agent-skills
 ```
 
-Copy skills into your agent’s skills directory, or clone this repo and point your harness at `skills/`.
+Or clone the repo and point your harness at `skills/`.
+
+### After install
+
+1. `/ask-insurance` — router across the whole desk  
+2. Keep carrier manuals / authority matrices in context so skills can cite real rules  
+3. Prefer focused skills over the full workflow when you already know the question  
 
 ---
 
-## Skill catalog
+## Skill packs
 
-| Skill | Command | What it does |
-|-------|---------|--------------|
-| Ask Underwriter | `/ask-underwriter` | Router — picks the right UW skill for the job |
-| Underwrite Submission | `/underwrite-submission` | Full file: intake → risk → terms → price → authority → decision |
-| Risk Appetite Check | `/risk-appetite-check` | Maps the risk to in / out / referral against guidelines |
-| Loss History Triage | `/loss-history-triage` | Frequency, severity, large losses, trend → UW action |
-| Financial Strength Review | `/financial-strength-review` | Balance-sheet posture & retention affordability |
-| Hazard & Exposure Analysis | `/hazard-exposure-analysis` | COPE, CAT, ops exposures → top loss drivers |
-| Coverage Terms Review | `/coverage-terms-review` | Limits, forms, gaps, endorsements, subjectivities |
-| Pricing Rationale | `/pricing-rationale` | Technical vs target vs walk-away price story |
-| Referral & Authority | `/referral-authority` | Desk authority vs mandatory referral |
-| Underwriting Decision Memo | `/underwriting-decision-memo` | Quote / modify / decline / refer — file-ready memo |
-| Broker RFI | `/broker-rfi` | Minimum missing-info questions that unblock a quote |
-| Renewal Comparison | `/renewal-comparison` | Expiring vs proposed: rate change & coverage drift |
+### Knowledge & routing
+| Skill | Command | Purpose |
+|-------|---------|---------|
+| Ask Insurance | `/ask-insurance` | Router for the whole pack |
+| Guideline Cite | `/guideline-cite` | Answer from manuals with citations |
+| Agent Coaching | `/agent-coaching` | Turn cases into coaching |
+| Handoff Brief | `/handoff-brief` | Cross-team case handoff |
 
-Each skill lives under [`skills/<name>/SKILL.md`](./skills).
+### Underwriting
+| Skill | Command | Purpose |
+|-------|---------|---------|
+| Ask Underwriter | `/ask-underwriter` | UW-only router |
+| Underwrite Submission | `/underwrite-submission` | Full submission workflow |
+| Risk Appetite Check | `/risk-appetite-check` | Appetite / guideline fit |
+| Loss History Triage | `/loss-history-triage` | Loss runs → UW action |
+| Financial Strength Review | `/financial-strength-review` | Financial / retention strength |
+| Hazard & Exposure Analysis | `/hazard-exposure-analysis` | COPE, CAT, ops exposures |
+| Coverage Terms Review | `/coverage-terms-review` | Forms, limits, gaps |
+| Pricing Rationale | `/pricing-rationale` | Rate story |
+| Referral & Authority | `/referral-authority` | Desk vs referral |
+| Underwriting Decision Memo | `/underwriting-decision-memo` | Quote / modify / decline / refer |
+| Broker RFI | `/broker-rfi` | Missing-info requests |
+| Renewal Comparison | `/renewal-comparison` | Expiring vs proposed |
 
----
+### Claims
+| Skill | Command | Purpose |
+|-------|---------|---------|
+| FNOL Intake | `/fnol-intake` | Complete first notice of loss |
+| Coverage Determination | `/coverage-determination` | Facts → coverage posture |
+| Liability Assessment | `/liability-assessment` | Fault / comparative negligence |
+| Severity Triage | `/severity-triage` | Repair vs total / handling track |
+| Fraud Red Flags | `/fraud-red-flags` | SIU referral screen |
+| Subrogation Scan | `/subrogation-scan` | Recovery opportunities |
+| Claims Status Update | `/claims-status-update` | Diary + customer update |
 
-## Suggested workflows
+### Customer & sales
+| Skill | Command | Purpose |
+|-------|---------|---------|
+| Quote Explanation | `/quote-explanation` | Why the price / change |
+| Coverage Counseling | `/coverage-counseling` | Limits & tradeoffs |
+| Endorsement Impact | `/endorsement-impact` | Mid-term change effects |
+| Complaint Escalation | `/complaint-escalation` | Upset customer / supervisor |
+| Retention Save | `/retention-save` | Guideline-compliant save |
 
-**New business**
+### Personal lines product
+| Skill | Command | Purpose |
+|-------|---------|---------|
+| MVR / CLUE Review | `/mvr-clue-review` | Violations & prior claims |
+| Telematics Review | `/telematics-review` | UBI score narrative |
+| Household Risk | `/household-risk` | Multi-driver / multi-policy |
+| Non-Renew Rationale | `/nonrenew-rationale` | Adverse action write-up |
 
-1. `/ask-underwriter` (optional) → `/underwrite-submission`  
-2. Or chain: appetite → losses → hazards → terms → price → authority → memo  
+### Compliance & QA
+| Skill | Command | Purpose |
+|-------|---------|---------|
+| Regulatory Complaint Response | `/regulatory-complaint-response` | DOI-style responses |
+| Fair Claims Check | `/fair-claims-check` | Process compliance audit |
+| Repair Network QA | `/repair-network-qa` | Estimate / DRP review |
+| Interaction QA Scoring | `/interaction-qa-scoring` | Call/chat rubric scoring |
 
-**Incomplete submission**
-
-1. `/broker-rfi` for blockers  
-2. Resume `/underwrite-submission` when the file is whole  
-
-**Renewal**
-
-1. `/renewal-comparison`  
-2. `/pricing-rationale` + `/coverage-terms-review` if the delta needs defending  
-
-**Keep in context:** carrier appetite docs and your authority matrix so appetite and referral skills can cite real rules.
+### Analytics & ops support
+| Skill | Command | Purpose |
+|-------|---------|---------|
+| Rate Filing Narrative | `/rate-filing-narrative` | Plain-language filing story |
+| Loss Ratio Investigation | `/loss-ratio-investigation` | LR deterioration drivers |
+| Catastrophe Event Brief | `/catastrophe-event-brief` | CAT exposure & playbook |
 
 ---
 
@@ -120,8 +144,15 @@ Each skill lives under [`skills/<name>/SKILL.md`](./skills).
 ```text
 .claude-plugin/     Claude Code plugin + marketplace
 .codex-plugin/      Codex plugin manifest
-.agents/plugins/    Codex local marketplace entry
-skills/             Twelve underwriting skills
+.agents/plugins/    Codex local marketplace
+skills/
+  knowledge/        Router, citations, coaching, handoffs
+  underwriting/     Submission & UW decision skills
+  claims/           FNOL through subrogation
+  customer/         Quote, counsel, retention, complaints
+  personal-lines/   MVR/CLUE, telematics, household, non-renew
+  compliance/       Regulator, fair claims, QA
+  analytics/        Filings, LR, CAT briefs
 docs/               GitHub Pages site
 ```
 

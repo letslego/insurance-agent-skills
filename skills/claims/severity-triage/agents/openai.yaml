@@ -1,0 +1,3 @@
+interface:
+  display_name: "Severity Triage"
+  short_description: "Triage repair vs total loss and handling track"

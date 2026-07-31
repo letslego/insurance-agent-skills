@@ -1,11 +1,11 @@
 {
-  "name": "insurance-underwriting-skills",
+  "name": "insurance-agent-skills",
   "interface": {
-    "displayName": "Insurance Underwriting Skills"
+    "displayName": "Insurance Agent Skills"
   },
   "plugins": [
     {
-      "name": "insurance-underwriting",
+      "name": "insurance-agent-skills",
       "source": {
         "source": "local",
         "path": "./"

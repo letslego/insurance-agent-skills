@@ -1,0 +1,3 @@
+interface:
+  display_name: "Loss Ratio Investigation"
+  short_description: "Diagnose loss ratio deterioration drivers"

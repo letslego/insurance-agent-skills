@@ -1,14 +1,44 @@
 (function () {
   const skills = window.UNDERWRITER_SKILLS || [];
   const list = document.getElementById("skill-list");
+  const filters = document.getElementById("pack-filters");
+  let activePack = "all";
 
-  if (list) {
-    list.innerHTML = skills
+  const packLabels = {
+    all: "All",
+    knowledge: "Knowledge",
+    underwriting: "Underwriting",
+    claims: "Claims",
+    customer: "Customer",
+    "personal-lines": "Personal lines",
+    compliance: "Compliance",
+    analytics: "Analytics",
+  };
+
+  const packs = ["all", ...new Set(skills.map((s) => s.pack))];
+
+  function renderFilters() {
+    if (!filters) return;
+    filters.innerHTML = packs
+      .map(
+        (pack) => `
+      <button type="button" class="pack-chip ${pack === activePack ? "active" : ""}" data-pack="${pack}">
+        ${packLabels[pack] || pack}
+      </button>`
+      )
+      .join("");
+  }
+
+  function renderSkills() {
+    if (!list) return;
+    const visible = skills.filter((s) => activePack === "all" || s.pack === activePack);
+    list.innerHTML = visible
       .map(
         (skill, index) => `
-      <article class="skill" data-skill="${skill.id}" style="animation-delay: ${index * 30}ms">
+      <article class="skill" data-skill="${skill.id}" style="animation-delay: ${index * 20}ms">
         <button class="skill-toggle" type="button" aria-expanded="false">
           <span>
+            <span class="skill-pack">${packLabels[skill.pack] || skill.pack}</span>
             <span class="skill-name">${skill.name}</span>
             <span class="skill-command">${skill.command}</span>
           </span>
@@ -28,15 +58,26 @@
       </article>`
       )
       .join("");
-
-    list.addEventListener("click", (event) => {
-      const button = event.target.closest(".skill-toggle");
-      if (!button) return;
-      const article = button.closest(".skill");
-      const open = article.classList.toggle("open");
-      button.setAttribute("aria-expanded", open ? "true" : "false");
-    });
   }
+
+  renderFilters();
+  renderSkills();
+
+  filters?.addEventListener("click", (event) => {
+    const chip = event.target.closest(".pack-chip");
+    if (!chip) return;
+    activePack = chip.dataset.pack;
+    renderFilters();
+    renderSkills();
+  });
+
+  list?.addEventListener("click", (event) => {
+    const button = event.target.closest(".skill-toggle");
+    if (!button) return;
+    const article = button.closest(".skill");
+    const open = article.classList.toggle("open");
+    button.setAttribute("aria-expanded", open ? "true" : "false");
+  });
 
   document.querySelectorAll(".tab").forEach((tab) => {
     tab.addEventListener("click", () => {
@@ -52,10 +93,7 @@
   });
 
   const header = document.querySelector(".site-header");
-  const onScroll = () => {
-    if (!header) return;
-    header.classList.toggle("scrolled", window.scrollY > 8);
-  };
+  const onScroll = () => header?.classList.toggle("scrolled", window.scrollY > 8);
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 })();

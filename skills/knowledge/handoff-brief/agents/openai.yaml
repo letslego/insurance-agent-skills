@@ -1,0 +1,3 @@
+interface:
+  display_name: "Handoff Brief"
+  short_description: "Write cross-team case handoff briefs"

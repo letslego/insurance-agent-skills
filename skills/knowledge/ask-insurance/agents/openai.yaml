@@ -1,0 +1,3 @@
+interface:
+  display_name: "Ask Insurance"
+  short_description: "Route to the right insurance desk skill"

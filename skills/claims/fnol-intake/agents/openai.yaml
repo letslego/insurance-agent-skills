@@ -1,0 +1,3 @@
+interface:
+  display_name: "Fnol Intake"
+  short_description: "Structure a complete FNOL from messy intake"

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Catastrophe Event Brief"
+  short_description: "Brief CAT exposure and ops playbooks"

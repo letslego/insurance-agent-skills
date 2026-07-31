@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Underwriter Skills — Agent skills for insurance underwriting</title>
-  <meta name="description" content="Twelve agent skills that work an insurance file the way a desk underwriter does. Install in Claude Code, Codex, or Cursor." />
-  <meta property="og:title" content="Underwriter Skills" />
-  <meta property="og:description" content="Agent skills for submission review, appetite, losses, terms, pricing, and decision memos." />
-  <meta property="og:type" content="website" />
+  <title>Insurance Agent Skills — Underwriting, claims, customer, compliance</title>
+  <meta name="description" content="39 agent skills for the modern insurance desk. Install in Claude Code, Codex, or Cursor." />
+  <meta property="og:title" content="Insurance Agent Skills" />
+  <meta property="og:description" content="Underwriting, claims, customer, personal lines, compliance, and analytics skills for insurance carriers and agencies." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
@@ -17,24 +16,24 @@
   <div class="atmosphere" aria-hidden="true"></div>
 
   <header class="site-header">
-    <a class="brand" href="#top">Underwriter Skills</a>
+    <a class="brand" href="#top">Insurance Agent Skills</a>
     <nav>
       <a href="#install">Install</a>
       <a href="#skills">Skills</a>
-      <a href="#workflow">Workflow</a>
-      <a class="nav-cta" href="https://github.com/letslego/insurance-underwriting-skills">GitHub</a>
+      <a href="#workflow">Workflows</a>
+      <a class="nav-cta" href="https://github.com/letslego/insurance-agent-skills">GitHub</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="hero">
       <div class="hero-copy">
-        <p class="brand-mark">Underwriter Skills</p>
-        <h1>Work the file.<br />Not the vibe.</h1>
-        <p class="lede">Twelve agent skills that follow a desk underwriter’s loop — appetite, exposure, terms, price, authority, and a decision you can defend.</p>
+        <p class="brand-mark">Insurance Agent Skills</p>
+        <h1>The whole desk,<br />as agent skills.</h1>
+        <p class="lede">Thirty-nine skills for underwriting, claims, customer conversations, personal lines, compliance, and analytics — built for high-volume carriers and the teams that support them.</p>
         <div class="cta-row">
           <a class="btn primary" href="#install">Install the pack</a>
-          <a class="btn ghost" href="#skills">Browse skills</a>
+          <a class="btn ghost" href="#skills">Browse 39 skills</a>
         </div>
       </div>
       <div class="hero-visual" aria-hidden="true">
@@ -42,12 +41,12 @@
           <div class="dossier-rule"></div>
           <div class="dossier-line w80"></div>
           <div class="dossier-line w60"></div>
-          <div class="dossier-stamp">FILE READY</div>
+          <div class="dossier-stamp">DESK READY</div>
           <div class="dossier-grid">
-            <span>Appetite</span><span>In</span>
-            <span>Loss trend</span><span>Stable</span>
-            <span>Authority</span><span>Desk</span>
-            <span>Decision</span><span>Quote</span>
+            <span>Underwriting</span><span>12</span>
+            <span>Claims</span><span>7</span>
+            <span>Customer</span><span>5</span>
+            <span>Compliance+</span><span>15</span>
           </div>
         </div>
       </div>
@@ -56,7 +55,7 @@
     <section id="install" class="section install">
       <div class="section-head">
         <h2>Install</h2>
-        <p>Native plugins for Claude Code and Codex, plus a one-liner for Cursor and other agents.</p>
+        <p>One marketplace for Claude Code, a one-liner for Codex and Cursor, then start with <code>/ask-insurance</code>.</p>
       </div>
 
       <div class="install-tabs" role="tablist">
@@ -66,22 +65,22 @@
       </div>
 
       <div class="tab-panel active" data-panel="claude">
-        <p class="panel-intro">Add the marketplace, install the plugin, reload — then use slash commands.</p>
-        <pre><code>/plugin marketplace add letslego/insurance-underwriting-skills
-/plugin install insurance-underwriting@insurance-underwriting-skills
+        <p class="panel-intro">Add the marketplace, install the plugin, reload plugins, then use slash commands.</p>
+        <pre><code>/plugin marketplace add letslego/insurance-agent-skills
+/plugin install insurance-agent-skills@insurance-agent-skills
 /reload-plugins</code></pre>
-        <p class="panel-note">CLI: <code>claude plugin marketplace add letslego/insurance-underwriting-skills</code> then <code>claude plugin install insurance-underwriting@insurance-underwriting-skills</code></p>
+        <p class="panel-note">CLI: <code>claude plugin marketplace add letslego/insurance-agent-skills</code> then <code>claude plugin install insurance-agent-skills@insurance-agent-skills</code></p>
       </div>
 
       <div class="tab-panel" data-panel="codex">
-        <p class="panel-intro">Fastest path — copy editable skills with skills.sh:</p>
-        <pre><code>npx skills@latest add letslego/insurance-underwriting-skills</code></pre>
-        <p class="panel-note">Or clone the repo and enable the <strong>Insurance Underwriting</strong> plugin from Codex <code>/plugins</code> (manifest at <code>.codex-plugin/plugin.json</code>).</p>
+        <p class="panel-intro">Copy editable skills with skills.sh:</p>
+        <pre><code>npx skills@latest add letslego/insurance-agent-skills</code></pre>
+        <p class="panel-note">Or clone the repo and enable <strong>Insurance Agent Skills</strong> from Codex <code>/plugins</code> (see <code>.codex-plugin/plugin.json</code>).</p>
       </div>
 
       <div class="tab-panel" data-panel="cursor">
-        <p class="panel-intro">Works with any Agent Skills–compatible harness:</p>
-        <pre><code>npx skills@latest add letslego/insurance-underwriting-skills</code></pre>
+        <p class="panel-intro">Any Agent Skills–compatible harness:</p>
+        <pre><code>npx skills@latest add letslego/insurance-agent-skills</code></pre>
         <p class="panel-note">Or clone and point your agent at the <code>skills/</code> directory.</p>
       </div>
     </section>
@@ -89,46 +88,53 @@
     <section id="skills" class="section skills">
       <div class="section-head">
         <h2>Skills</h2>
-        <p>Each skill is a focused underwriting move. Expand any row for when to use it and what you get.</p>
+        <p>Filter by desk area. Expand a row for when to use it and what you get back.</p>
       </div>
 
-      <div class="skill-list" id="skill-list">
-        <!-- filled by script from SKILLS data -->
-      </div>
+      <div class="pack-filters" id="pack-filters" role="tablist" aria-label="Skill packs"></div>
+      <div class="skill-list" id="skill-list"></div>
     </section>
 
     <section id="workflow" class="section workflow">
       <div class="section-head">
-        <h2>How underwriters use the pack</h2>
-        <p>One composition of the desk loop — invoke the full flow or cut in at the step you need.</p>
+        <h2>Common workflows</h2>
+        <p>Cut into the loop where you are — or ask the router.</p>
       </div>
-      <ol class="flow">
-        <li><strong>Intake</strong><span>Map the file and gaps</span></li>
-        <li><strong>Appetite</strong><span>In, out, or refer</span></li>
-        <li><strong>Risk</strong><span>Losses, hazards, financials</span></li>
-        <li><strong>Terms</strong><span>Structure the coverage</span></li>
-        <li><strong>Price</strong><span>Technical → target → walk-away</span></li>
-        <li><strong>Authority</strong><span>Desk bind or escalate</span></li>
-        <li><strong>Decide</strong><span>Memo, RFI, or renewal stance</span></li>
-      </ol>
-      <p class="workflow-tip">Unsure where to start? Run <code>/ask-underwriter</code>. For a full file, run <code>/underwrite-submission</code>.</p>
+      <div class="workflow-grid">
+        <article>
+          <h3>New claim</h3>
+          <p><code>/fnol-intake</code> → <code>/coverage-determination</code> → <code>/liability-assessment</code> / <code>/severity-triage</code> → <code>/claims-status-update</code></p>
+        </article>
+        <article>
+          <h3>Angry or shopping customer</h3>
+          <p><code>/complaint-escalation</code> or <code>/quote-explanation</code> → <code>/retention-save</code> → <code>/handoff-brief</code> if escalating</p>
+        </article>
+        <article>
+          <h3>Underwriting file</h3>
+          <p><code>/ask-underwriter</code> or <code>/underwrite-submission</code> → memo / RFI / referral</p>
+        </article>
+        <article>
+          <h3>Not sure</h3>
+          <p><code>/ask-insurance</code> routes across underwriting, claims, customer, compliance, and analytics.</p>
+        </article>
+      </div>
     </section>
 
     <section class="section disclaimer">
       <h2>Decision support, not bind authority</h2>
-      <p>These skills help structure analysis and write-ups. They do not replace carrier guidelines, your authority matrix, actuarial models, or licensed professional judgment. Cite your appetite docs in-session so the agent can ground recommendations in your rules.</p>
+      <p>These skills structure analysis and write-ups. They do not replace carrier guidelines, authority matrices, actuarial models, or licensed professional judgment. Put your manuals in context so answers can be cited.</p>
     </section>
   </main>
 
   <footer class="site-footer">
     <div>
-      <p class="brand">Underwriter Skills</p>
-      <p>MIT © letslego</p>
+      <p class="brand">Insurance Agent Skills</p>
+      <p>MIT © letslego · 39 skills</p>
     </div>
     <div class="footer-links">
-      <a href="https://github.com/letslego/insurance-underwriting-skills">Repository</a>
-      <a href="https://github.com/letslego/insurance-underwriting-skills/tree/main/skills">Skill source</a>
-      <a href="https://github.com/letslego/insurance-underwriting-skills/blob/main/LICENSE">License</a>
+      <a href="https://github.com/letslego/insurance-agent-skills">Repository</a>
+      <a href="https://github.com/letslego/insurance-agent-skills/tree/main/skills">Skill source</a>
+      <a href="https://github.com/letslego/insurance-agent-skills/blob/main/LICENSE">License</a>
     </div>
   </footer>
 

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Endorsement Impact"
+  short_description: "Show impact of mid-term policy changes"

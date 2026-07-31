@@ -1,28 +1,27 @@
 {
-  "name": "insurance-underwriting",
-  "version": "1.0.0",
-  "description": "Insurance underwriting skills for submission review, appetite fit, losses, hazards, terms, pricing, authority, and decision memos.",
+  "name": "insurance-agent-skills",
+  "version": "2.0.0",
+  "description": "Insurance agent skills for underwriting, claims, customer service, personal lines, compliance, analytics, and desk knowledge work.",
   "author": {
     "name": "letslego",
-    "url": "https://github.com/letslego/insurance-underwriting-skills"
+    "url": "https://github.com/letslego/insurance-agent-skills"
   },
-  "homepage": "https://letslego.github.io/insurance-underwriting-skills/",
-  "repository": "https://github.com/letslego/insurance-underwriting-skills",
+  "homepage": "https://letslego.github.io/insurance-agent-skills/",
+  "repository": "https://github.com/letslego/insurance-agent-skills",
   "license": "MIT",
   "keywords": [
     "insurance",
     "underwriting",
-    "risk",
-    "pricing",
-    "appetite",
-    "renewals",
+    "claims",
+    "customer-service",
+    "compliance",
     "skills"
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "Insurance Underwriting",
-    "shortDescription": "Submission underwriting, appetite, losses, terms, pricing, and decision memos",
-    "longDescription": "A pack of agent skills that mirror how insurance underwriters work a file: intake, appetite, hazard and loss analysis, coverage terms, pricing rationale, authority/referral, broker RFIs, renewals, and decision memos.",
+    "displayName": "Insurance Agent Skills",
+    "shortDescription": "Underwriting, claims, customer, compliance, and analytics skills for insurance desks",
+    "longDescription": "A pack of agent skills for modern insurance carriers and agencies: underwriting files, claims handling, customer conversations, personal lines decisions, compliance, analytics narratives, and cross-team handoffs.",
     "developerName": "letslego",
     "category": "Productivity",
     "capabilities": [
@@ -31,11 +30,11 @@
       "Write"
     ],
     "defaultPrompt": [
-      "Help me underwrite this submission.",
-      "Is this risk in appetite?",
-      "Draft an underwriting decision memo."
+      "Help me intake this FNOL.",
+      "Explain this quote change to the customer.",
+      "Underwrite this submission."
     ],
-    "websiteURL": "https://letslego.github.io/insurance-underwriting-skills/",
+    "websiteURL": "https://letslego.github.io/insurance-agent-skills/",
     "brandColor": "#0B3D5C"
   }
 }

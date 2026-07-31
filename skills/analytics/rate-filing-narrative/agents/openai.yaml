@@ -1,0 +1,3 @@
+interface:
+  display_name: "Rate Filing Narrative"
+  short_description: "Write plain-language rate filing narratives"

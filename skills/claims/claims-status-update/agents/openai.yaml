@@ -1,0 +1,3 @@
+interface:
+  display_name: "Claims Status Update"
+  short_description: "Write customer-ready claim status updates"

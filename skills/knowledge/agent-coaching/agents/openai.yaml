@@ -1,0 +1,3 @@
+interface:
+  display_name: "Agent Coaching"
+  short_description: "Coach agents from real cases"

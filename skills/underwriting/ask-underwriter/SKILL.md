@@ -6,7 +6,9 @@ disable-model-invocation: true
 
 # Ask Underwriter
 
-Pick the smallest skill that matches the job. Prefer a focused skill over the full submission flow when the user already knows the question.
+Pick the smallest **underwriting** skill that matches the job. Prefer a focused skill over the full submission flow when the user already knows the question.
+
+For claims, customer, compliance, or analytics questions, use `ask-insurance` instead.
 
 ## Route
 

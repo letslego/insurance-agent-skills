@@ -1,0 +1,3 @@
+interface:
+  display_name: "Fair Claims Check"
+  short_description: "Audit claim files against fair-claims duties"
