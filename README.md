@@ -11,7 +11,7 @@
 
 # Insurance Agent Skills
 
-Thirty-nine installable agent skills for carriers and agencies — built for personal-lines-heavy desks (think GEICO-style volume) and still useful for commercial underwriting files.
+Thirty-nine installable agent skills for carriers and agencies — built for personal-lines and commercial insurance desks.
 
 Works with **Claude Code**, **Codex**, **Cursor**, and any [Agent Skills](https://agentskills.io/) harness.
 
