@@ -15,10 +15,29 @@ Thirty-nine installable agent skills for carriers and agencies — built for per
 
 Works with **Claude Code**, **Codex**, **Cursor**, and any [Agent Skills](https://agentskills.io/) harness.
 
-**Docs:** [letslego.github.io/insurance-agent-skills](https://letslego.github.io/insurance-agent-skills/)  
-**Video tour:** [Watch the narrated skill walkthrough](https://letslego.github.io/insurance-agent-skills/#video) (~12 min) · [Download MP4](./docs/video/insurance-agent-skills-tour.mp4) · [Narration script](./docs/video/narration-script.md)
+**Docs:** [letslego.github.io/insurance-agent-skills](https://letslego.github.io/insurance-agent-skills/)
 
 > **Decision support only.** Not binding authority, legal advice, actuarial certification, or a substitute for carrier guidelines, your authority matrix, or licensed judgment.
+
+---
+
+## Video tour
+
+Narrated walkthrough of all **39 skills** (~12 min): when to use each one, and which skills to pair with it.
+
+[![Watch the Insurance Agent Skills video tour](docs/video/poster.jpg)](https://letslego.github.io/insurance-agent-skills/#video)
+
+<p align="center">
+  <a href="https://letslego.github.io/insurance-agent-skills/#video"><strong>▶ Watch on GitHub Pages</strong></a>
+  &nbsp;·&nbsp;
+  <a href="https://letslego.github.io/insurance-agent-skills/video/insurance-agent-skills-tour.mp4"><strong>Play / download MP4</strong></a>
+  &nbsp;·&nbsp;
+  <a href="docs/video/narration-script.md">Narration script</a>
+</p>
+
+<video src="https://letslego.github.io/insurance-agent-skills/video/insurance-agent-skills-tour.mp4" controls poster="https://letslego.github.io/insurance-agent-skills/video/poster.jpg" width="100%">
+  <a href="https://letslego.github.io/insurance-agent-skills/#video">Watch the video tour</a>
+</video>
 
 ---
 
