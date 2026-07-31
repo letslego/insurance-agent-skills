@@ -13,3 +13,6 @@ docs/video/workflow-intake-triage/raw-screen.mp4
 docs/video/workflow-intake-triage/preflight.mp4
 docs/video/workflow-intake-triage/frame-*.jpg
 docs/video/workflow-intake-triage/*.marker
+
+__pycache__/
+*.pyc
