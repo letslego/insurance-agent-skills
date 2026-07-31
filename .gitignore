@@ -1,6 +1,7 @@
 .DS_Store
 node_modules/
 *.log
+.runs/
 docs/video/audio/
 docs/video/work/
 docs/video/slides/

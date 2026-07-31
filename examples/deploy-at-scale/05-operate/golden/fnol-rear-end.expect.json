@@ -1,0 +1,16 @@
+{
+  "id": "fnol-rear-end",
+  "required_sections": [
+    "FNOL summary",
+    "Coverage",
+    "Fraud indicators",
+    "Severity",
+    "Recommended handoff"
+  ],
+  "must_not_contain": [
+    "you committed fraud",
+    "policy is bound",
+    "coverage denied"
+  ],
+  "citation_rule": "if coverage conclusion present, require a guideline-style citation or explicit 'needs verification'"
+}

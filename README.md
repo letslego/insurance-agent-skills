@@ -178,13 +178,31 @@ Or clone the repo and point your harness at `skills/`.
 
 Skills are the **playbooks**. At scale you need distribution, orchestration, ground-truth context, and governance — not just a local install.
 
+**Sample code for every step:** [`examples/deploy-at-scale/`](./examples/deploy-at-scale/)
+
+| Step | Sample |
+|------|--------|
+| 1. Package & pin | [`01-package-pin/`](./examples/deploy-at-scale/01-package-pin) |
+| 2. Orchestrate | [`02-orchestrate/`](./examples/deploy-at-scale/02-orchestrate) |
+| 3. Ground truth | [`03-ground-truth/`](./examples/deploy-at-scale/03-ground-truth) |
+| 4. Rollout rings | [`04-rollout-rings/`](./examples/deploy-at-scale/04-rollout-rings) |
+| 5. Operate | [`05-operate/`](./examples/deploy-at-scale/05-operate) |
+| 6. Write back | [`06-writeback/`](./examples/deploy-at-scale/06-writeback) |
+
+Offline glue (guardrails → parse → ring → mock writeback → audit):
+
+```bash
+CLAIM_ID=demo-001 bash examples/deploy-at-scale/end-to-end.sh \
+  examples/deploy-at-scale/fixtures/sample-triage-package.md
+```
+
 ### 1. Package once, pin versions
 
 | Pattern | When to use |
 |---------|-------------|
 | **Private fork / internal mirror** of this repo | Carrier-controlled changes, private guidelines hooks |
 | **Claude Code marketplace plugin** | Desktop agents for UW/claims/CX teams |
-| **`npx skills add <org>/<repo>@<tag>`** | Pin a release; avoid floating `latest` in prod |
+| **Clone git tag → `npx skills add <checkout> --all`** | Pin an immutable ref (see `examples/deploy-at-scale/01-package-pin`) |
 | **Monorepo path / git submodule** | Embed skills next to product services |
 
 Treat skill packs like libraries: **semver tags**, changelog, and a thin “promoted” set per desk (claims intake vs UW referral vs CX retention).
@@ -275,6 +293,7 @@ skills/
   compliance/       Regulator, fair claims, QA
   analytics/        Filings, LR, CAT briefs
 docs/               GitHub Pages site
+examples/           Deploy-at-scale sample code
 ```
 
 ---

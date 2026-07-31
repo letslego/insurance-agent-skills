@@ -1,0 +1,22 @@
+# Step 3 — Carrier ground truth (example only; replace with your matrix)
+desk: claims-intake
+currency: USD
+limits:
+  auto_route_max_severity: moderate
+  draft_reserve_suggest_max: 5000
+  bind_deny_requires_human: true
+escalation:
+  - when: severity >= major
+    to: complex-claims
+  - when: fraud_indicators >= 2
+    to: siu-review
+  - when: coverage_uncertain
+    to: coverage-attorney
+skills_allowed:
+  - intake-and-triage
+  - fnol-intake
+  - coverage-determination
+  - fraud-red-flags
+  - severity-triage
+  - handoff-brief
+  - guideline-cite

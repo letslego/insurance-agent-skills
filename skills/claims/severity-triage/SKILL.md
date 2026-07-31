@@ -1,6 +1,8 @@
 ---
 name: severity-triage
-description: Triage claim severity: repair vs total loss, rental, and handling track. Use when estimating severity, assigning appraiser/DRP, or spotting complex claims.
+description: >-
+  Triage claim severity (repair vs total loss, rental, and handling track).
+  Use when estimating severity, assigning appraiser/DRP, or spotting complex claims.
 ---
 
 # Severity Triage

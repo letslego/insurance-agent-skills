@@ -1,0 +1,43 @@
+{
+  "pack": "letslego/insurance-agent-skills",
+  "version": "main",
+  "desks": {
+    "claims-intake": {
+      "orchestrators": ["intake-and-triage"],
+      "skills": [
+        "intake-and-triage",
+        "fnol-intake",
+        "coverage-determination",
+        "fraud-red-flags",
+        "severity-triage",
+        "handoff-brief",
+        "ask-insurance",
+        "guideline-cite"
+      ]
+    },
+    "underwriting": {
+      "orchestrators": ["underwrite-submission", "ask-underwriter"],
+      "skills": [
+        "ask-underwriter",
+        "underwrite-submission",
+        "risk-appetite-check",
+        "pricing-rationale",
+        "referral-authority",
+        "underwriting-decision-memo",
+        "broker-rfi",
+        "guideline-cite"
+      ]
+    },
+    "customer-retention": {
+      "orchestrators": ["ask-insurance"],
+      "skills": [
+        "ask-insurance",
+        "quote-explanation",
+        "coverage-counseling",
+        "retention-save",
+        "complaint-escalation",
+        "handoff-brief"
+      ]
+    }
+  }
+}

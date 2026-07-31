@@ -188,26 +188,32 @@
         <article>
           <h3>1. Package &amp; pin</h3>
           <p>Mirror the pack privately. Install via Claude marketplace, <code>npx skills add org/repo@tag</code>, or submodule. Pin semver — never float <code>latest</code> in production.</p>
+          <p class="panel-note"><a href="https://github.com/letslego/insurance-agent-skills/tree/main/examples/deploy-at-scale/01-package-pin">Sample: install-pinned.sh + promoted-skills.json</a></p>
         </article>
         <article>
           <h3>2. Orchestrate</h3>
           <p>Expose orchestrators (<code>/intake-and-triage</code>, <code>/underwrite-submission</code>), not the whole catalog. Run via Cursor / Claude / Codex desks or SDK / CLI workers on a queue.</p>
+          <p class="panel-note"><a href="https://github.com/letslego/insurance-agent-skills/tree/main/examples/deploy-at-scale/02-orchestrate">Sample: CLI worker + SDK runner + queue stub</a></p>
         </article>
         <article>
           <h3>3. Ground truth</h3>
           <p>Every job mounts manuals, authority matrices, and channel allowlists. Pair lookups with <code>/guideline-cite</code>. No improvising policy language.</p>
+          <p class="panel-note"><a href="https://github.com/letslego/insurance-agent-skills/tree/main/examples/deploy-at-scale/03-ground-truth">Sample: build-run-context.py</a></p>
         </article>
         <article>
           <h3>4. Roll out in rings</h3>
           <p>Pilot one LOB → shadow next to humans → assist (draft only) → automate low-risk paths. Escalate the rest with <code>/handoff-brief</code>.</p>
+          <p class="panel-note"><a href="https://github.com/letslego/insurance-agent-skills/tree/main/examples/deploy-at-scale/04-rollout-rings">Sample: rings.json + ring_router.py</a></p>
         </article>
         <article>
           <h3>5. Operate</h3>
           <p>Golden-file evals, skill-version audit logs, escalate/override metrics, and a kill switch (disable orchestrator or pin the previous tag).</p>
+          <p class="panel-note"><a href="https://github.com/letslego/insurance-agent-skills/tree/main/examples/deploy-at-scale/05-operate">Sample: eval_suite + audit_log + guardrails</a></p>
         </article>
         <article>
           <h3>6. Write back</h3>
           <p>Emit structured packages (triage memo, UW decision, RFI) into claims/UW systems after human review — or auto-route only where policy allows.</p>
+          <p class="panel-note"><a href="https://github.com/letslego/insurance-agent-skills/tree/main/examples/deploy-at-scale/06-writeback">Sample: parse_triage + claims_core_client</a></p>
         </article>
       </div>
 
@@ -226,7 +232,7 @@
         <li>Kill switch ready</li>
       </ul>
 
-      <p class="panel-note">Full write-up in the <a href="https://github.com/letslego/insurance-agent-skills#deploy-at-scale">README — Deploy at scale</a>.</p>
+      <p class="panel-note">Full write-up in the <a href="https://github.com/letslego/insurance-agent-skills#deploy-at-scale">README — Deploy at scale</a>. Runnable samples: <a href="https://github.com/letslego/insurance-agent-skills/tree/main/examples/deploy-at-scale">examples/deploy-at-scale</a>.</p>
     </section>
 
     <section class="section disclaimer">

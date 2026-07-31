@@ -1,0 +1,39 @@
+{
+  "workflow": "intake-and-triage",
+  "lob": "personal-auto",
+  "rings": {
+    "pilot": {
+      "enabled": true,
+      "traffic_percent": 5,
+      "mode": "assist",
+      "channels": ["internal-desk"]
+    },
+    "shadow": {
+      "enabled": true,
+      "traffic_percent": 25,
+      "mode": "shadow",
+      "score_skills": ["interaction-qa-scoring", "fair-claims-checklist"]
+    },
+    "assist": {
+      "enabled": false,
+      "traffic_percent": 50,
+      "mode": "assist",
+      "writeback": "draft_only"
+    },
+    "automate": {
+      "enabled": false,
+      "traffic_percent": 10,
+      "mode": "automate",
+      "writeback": "auto_route_low_risk",
+      "auto_route_when": {
+        "max_severity": "minor",
+        "max_fraud_indicators": 0,
+        "coverage_clear": true
+      },
+      "else": "escalate_via_handoff_brief"
+    }
+  },
+  "kill_switch": false,
+  "pinned_pack_tag": "main",
+  "previous_pack_tag": "main"
+}
