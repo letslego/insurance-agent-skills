@@ -23,7 +23,7 @@ Works with **Claude Code**, **Codex**, **Cursor**, and any [Agent Skills](https:
 
 ## Workflow demo — intake & triage
 
-Silent capture + studio voiceover of installing skills and stitching an **intake-and-triage** agent:
+Real Cursor desktop screen capture (silent) + studio voiceover — install skills and stitch an **intake-and-triage** agent:
 
 `/fnol-intake` → `/coverage-determination` → `/fraud-red-flags` → `/severity-triage` → `/handoff-brief`
 
