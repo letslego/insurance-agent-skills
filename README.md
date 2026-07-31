@@ -15,7 +15,8 @@ Thirty-nine installable agent skills for carriers and agencies — built for per
 
 Works with **Claude Code**, **Codex**, **Cursor**, and any [Agent Skills](https://agentskills.io/) harness.
 
-**Docs:** [letslego.github.io/insurance-agent-skills](https://letslego.github.io/insurance-agent-skills/)
+**Docs:** [letslego.github.io/insurance-agent-skills](https://letslego.github.io/insurance-agent-skills/)  
+**Video tour:** [Watch the narrated skill walkthrough](https://letslego.github.io/insurance-agent-skills/#video) (~12 min) · [Download MP4](./docs/video/insurance-agent-skills-tour.mp4) · [Narration script](./docs/video/narration-script.md)
 
 > **Decision support only.** Not binding authority, legal advice, actuarial certification, or a substitute for carrier guidelines, your authority matrix, or licensed judgment.
 

@@ -355,6 +355,20 @@ pre code {
   line-height: 1.65;
 }
 
+.video-frame {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--ink-deep);
+}
+
+.video-frame video {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
 .pack-filters {
   display: flex;
   flex-wrap: wrap;

@@ -1,3 +1,8 @@
 .DS_Store
 node_modules/
 *.log
+
+# Video build intermediates
+docs/video/audio/
+docs/video/work/
+docs/video/slides/
