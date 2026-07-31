@@ -1,13 +1,14 @@
 .DS_Store
 node_modules/
 *.log
-
-# Video build intermediates
 docs/video/audio/
 docs/video/work/
 docs/video/slides/
 docs/video/workflow-intake-triage/vo/
+docs/video/workflow-intake-triage/vo-screen/
 docs/video/workflow-intake-triage/work/
 docs/video/workflow-intake-triage/slides/
 docs/video/workflow-intake-triage/raw-screen.mp4
 docs/video/workflow-intake-triage/preflight.mp4
+docs/video/workflow-intake-triage/frame-*.jpg
+docs/video/workflow-intake-triage/*.marker
