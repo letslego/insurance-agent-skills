@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Insurance Agent Skills — Underwriting, claims, customer, compliance</title>
-  <meta name="description" content="39 agent skills for the modern insurance desk. Install in Claude Code, Codex, or Cursor." />
+  <meta name="description" content="40 agent skills for the modern insurance desk — plus how to deploy them at scale. Claude Code, Codex, Cursor." />
   <meta property="og:title" content="Insurance Agent Skills" />
-  <meta property="og:description" content="Underwriting, claims, customer, personal lines, compliance, and analytics skills for insurance carriers and agencies." />
+  <meta property="og:description" content="Underwriting, claims, customer, personal lines, compliance, and analytics skills — install locally or deploy at scale." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
@@ -22,6 +22,7 @@
       <a href="#install">Install</a>
       <a href="#skills">Skills</a>
       <a href="#workflow">Workflows</a>
+      <a href="#deploy">Scale</a>
       <a class="nav-cta" href="https://github.com/letslego/insurance-agent-skills">GitHub</a>
     </nav>
   </header>
@@ -31,7 +32,7 @@
       <div class="hero-copy">
         <p class="brand-mark">Insurance Agent Skills</p>
         <h1>The whole desk,<br />as agent skills.</h1>
-        <p class="lede">Thirty-nine skills for underwriting, claims, customer conversations, personal lines, compliance, and analytics — built for high-volume carriers and the teams that support them.</p>
+        <p class="lede">Forty skills for underwriting, claims, customer conversations, personal lines, compliance, and analytics — install on a desk, or deploy as pinned workflows across the carrier.</p>
         <div class="cta-row">
           <a class="btn primary" href="#install">Install the pack</a>
           <a class="btn ghost" href="#skills">Browse 39 skills</a>
@@ -177,6 +178,57 @@
       </div>
     </section>
 
+    <section id="deploy" class="section deploy">
+      <div class="section-head">
+        <h2>Deploy at scale</h2>
+        <p>Skills are playbooks. Scale needs pinned distribution, orchestrators, ground-truth context, and a staged rollout.</p>
+      </div>
+
+      <div class="deploy-grid">
+        <article>
+          <h3>1. Package &amp; pin</h3>
+          <p>Mirror the pack privately. Install via Claude marketplace, <code>npx skills add org/repo@tag</code>, or submodule. Pin semver — never float <code>latest</code> in production.</p>
+        </article>
+        <article>
+          <h3>2. Orchestrate</h3>
+          <p>Expose orchestrators (<code>/intake-and-triage</code>, <code>/underwrite-submission</code>), not the whole catalog. Run via Cursor / Claude / Codex desks or SDK / CLI workers on a queue.</p>
+        </article>
+        <article>
+          <h3>3. Ground truth</h3>
+          <p>Every job mounts manuals, authority matrices, and channel allowlists. Pair lookups with <code>/guideline-cite</code>. No improvising policy language.</p>
+        </article>
+        <article>
+          <h3>4. Roll out in rings</h3>
+          <p>Pilot one LOB → shadow next to humans → assist (draft only) → automate low-risk paths. Escalate the rest with <code>/handoff-brief</code>.</p>
+        </article>
+        <article>
+          <h3>5. Operate</h3>
+          <p>Golden-file evals, skill-version audit logs, escalate/override metrics, and a kill switch (disable orchestrator or pin the previous tag).</p>
+        </article>
+        <article>
+          <h3>6. Write back</h3>
+          <p>Emit structured packages (triage memo, UW decision, RFI) into claims/UW systems after human review — or auto-route only where policy allows.</p>
+        </article>
+      </div>
+
+      <pre class="deploy-arch" aria-label="Reference architecture"><code>Core systems  →  Agent runtime (pinned skills + manuals/RAG)
+                         ↓
+              Structured out (triage / memo / handoff)
+                         ↓
+              Human review / core writeback</code></pre>
+
+      <ul class="deploy-checklist">
+        <li>Skills pinned by tag in every environment</li>
+        <li>Only promoted orchestrators exposed per desk/channel</li>
+        <li>Guidelines + authority matrix injected every run</li>
+        <li>Shadow → assist → automate</li>
+        <li>Audit log of skill version + outputs</li>
+        <li>Kill switch ready</li>
+      </ul>
+
+      <p class="panel-note">Full write-up in the <a href="https://github.com/letslego/insurance-agent-skills#deploy-at-scale">README — Deploy at scale</a>.</p>
+    </section>
+
     <section class="section disclaimer">
       <h2>Decision support, not bind authority</h2>
       <p>These skills structure analysis and write-ups. They do not replace carrier guidelines, authority matrices, actuarial models, or licensed professional judgment. Put your manuals in context so answers can be cited.</p>
@@ -186,7 +238,7 @@
   <footer class="site-footer">
     <div>
       <p class="brand">Insurance Agent Skills</p>
-      <p>MIT © letslego · 39 skills</p>
+      <p>MIT © letslego · 40 skills</p>
     </div>
     <div class="footer-links">
       <a href="https://github.com/letslego/insurance-agent-skills">Repository</a>

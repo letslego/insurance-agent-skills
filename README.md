@@ -174,6 +174,92 @@ Or clone the repo and point your harness at `skills/`.
 
 ---
 
+## Deploy at scale
+
+Skills are the **playbooks**. At scale you need distribution, orchestration, ground-truth context, and governance — not just a local install.
+
+### 1. Package once, pin versions
+
+| Pattern | When to use |
+|---------|-------------|
+| **Private fork / internal mirror** of this repo | Carrier-controlled changes, private guidelines hooks |
+| **Claude Code marketplace plugin** | Desktop agents for UW/claims/CX teams |
+| **`npx skills add <org>/<repo>@<tag>`** | Pin a release; avoid floating `latest` in prod |
+| **Monorepo path / git submodule** | Embed skills next to product services |
+
+Treat skill packs like libraries: **semver tags**, changelog, and a thin “promoted” set per desk (claims intake vs UW referral vs CX retention).
+
+### 2. Orchestrate workflows, don’t dump the whole pack
+
+At scale, agents should call **orchestrators** (`/intake-and-triage`, `/underwrite-submission`) or short chains — not load every skill every time.
+
+```text
+Event (FNOL / submission / cancel intent)
+   → router or orchestrator skill
+   → focused child skills
+   → structured handoff (JSON/markdown) into core systems
+```
+
+**Programmatic runners** (batch or service):
+
+- **Cursor Agent CLI / SDK** — `agent --print` or `@cursor/sdk` / `cursor-sdk` against a workspace that already has `.agents/skills/`
+- **CI / queue workers** — same prompt + skill pack on each claim/file ID
+- **Human-in-the-loop desks** — slash commands in Cursor / Claude Code / Codex for exception handling
+
+Keep prompts stable; version the skill pack separately so you can roll forward/back without rewriting every job.
+
+### 3. Inject carrier ground truth on every run
+
+Scale fails when the model improvises policy. On each invocation, mount:
+
+1. **Appetite / claims / servicing manuals** (or RAG over them) — pair with `/guideline-cite`
+2. **Authority / referral matrices**
+3. **Desk-specific allowlists** (which skills this channel may run)
+4. **PII / retention rules** for logs and transcripts
+
+Store those as repo config (`docs/agents/`, policy packs) or pull from your CMS/wiki at job start.
+
+### 4. Roll out in rings
+
+1. **Pilot** — one LOB + one workflow (e.g. intake-and-triage only)  
+2. **Shadow** — agent output alongside humans; score with `/interaction-qa-scoring` / fair-claims checks  
+3. **Assist** — draft-only into claim/UW systems; human commits  
+4. **Automate** — auto-route low-risk paths; escalate the rest via `/handoff-brief` / `/referral-authority`
+
+### 5. Operate like production software
+
+- **Eval suite** — golden files (sample FNOLs, submissions) + expected section presence / citation rules  
+- **Telemetry** — skill name, model, latency, escalate rate, override rate  
+- **Audit** — persist skill version + prompt hash + inputs/outputs with your retention policy  
+- **Guardrails** — no bind/deny language without guideline citation; fraud skills stay “indicators only”  
+- **Ownership** — desk lead owns orchestrators; compliance owns fair-claims / regulator skills  
+
+### 6. Reference architecture
+
+```text
+┌──────────────┐    ┌─────────────────────┐    ┌──────────────────┐
+│ Core systems │───▶│ Agent runtime       │───▶│ Structured out   │
+│ claims / UW  │    │ Cursor / Claude /   │    │ triage package / │
+│ policy admin │    │ Codex / SDK worker  │    │ memo / handoff   │
+└──────────────┘    │  + pinned skills    │    └────────┬─────────┘
+                    │  + manuals / RAG    │             │
+                    └─────────────────────┘             ▼
+                                              Human review / core writeback
+```
+
+### Minimal scale checklist
+
+- [ ] Skills pinned by tag in every environment  
+- [ ] Only promoted orchestrators exposed to each desk/channel  
+- [ ] Guidelines + authority matrix injected every run  
+- [ ] Shadow metrics before assist; assist before automate  
+- [ ] Audit log of skill version + outputs  
+- [ ] Kill switch (disable orchestrator / pin previous tag)
+
+More detail on the docs site: [Deploy at scale](https://letslego.github.io/insurance-agent-skills/#deploy).
+
+---
+
 ## Repo layout
 
 ```text
