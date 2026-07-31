@@ -15,6 +15,7 @@ Pick the smallest skill that matches the job across the whole desk.
 | Unsure which UW skill | `ask-underwriter` |
 | Full UW submission | `underwrite-submission` |
 | New claim intake | `fnol-intake` |
+| Full intake → coverage → fraud → route | `intake-and-triage` |
 | Is it covered? | `coverage-determination` |
 | Who's at fault? | `liability-assessment` |
 | Repair vs total / track | `severity-triage` |

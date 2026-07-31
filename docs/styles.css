@@ -406,6 +406,57 @@ pre code {
   margin-bottom: 0.2rem;
 }
 
+.workflow-feature {
+  border: 1px solid var(--line);
+  background: rgba(247, 250, 251, 0.9);
+  border-radius: 16px;
+  padding: 1.35rem 1.4rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.workflow-kicker {
+  margin: 0 0 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--copper);
+}
+
+.workflow-feature h3 {
+  font-family: var(--font-display);
+  margin: 0 0 0.5rem;
+  color: var(--ink-deep);
+  font-size: 1.6rem;
+}
+
+.workflow-feature > p {
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+}
+
+.workflow-chain {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.video-placeholder {
+  margin-top: 1rem;
+  padding: 1.25rem 1.35rem;
+  color: #e8f1f5;
+  background: linear-gradient(160deg, var(--ink) 0%, #114866 60%, var(--teal) 140%);
+}
+
+.video-placeholder p {
+  margin: 0 0 0.75rem;
+  color: #e8f1f5;
+}
+
+.video-placeholder .panel-note,
+.video-placeholder .panel-note a {
+  color: #d7e8ef;
+}
+
 .workflow-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -126,12 +126,30 @@
     <section id="workflow" class="section workflow">
       <div class="section-head">
         <h2>Common workflows</h2>
-        <p>Cut into the loop where you are — or ask the router.</p>
+        <p>Cut into the loop where you are — or stitch an orchestrator. The intake-and-triage demo video will publish here once recorded.</p>
       </div>
+
+      <article class="workflow-feature" id="intake-and-triage-demo">
+        <p class="workflow-kicker">Featured workflow</p>
+        <h3>Intake &amp; triage agent</h3>
+        <p>Collect claim details → verify coverage → detect fraud signals → route / escalate.</p>
+        <p class="workflow-chain"><code>/intake-and-triage</code> stitches <code>/fnol-intake</code> → <code>/coverage-determination</code> → <code>/fraud-red-flags</code> → <code>/severity-triage</code> → <code>/handoff-brief</code></p>
+        <div class="video-frame video-placeholder" id="workflow-demo-player">
+          <p><strong>Demo video coming next.</strong> We need a real screen recording of install + live agent run (see below).</p>
+          <p class="panel-note">
+            <a href="https://github.com/letslego/insurance-agent-skills/blob/main/docs/demo/intake-and-triage/SAMPLE_CLAIM.md">Sample claim</a>
+            ·
+            <a href="https://github.com/letslego/insurance-agent-skills/blob/main/docs/demo/intake-and-triage/RECORDING_BRIEF.md">Recording brief</a>
+            ·
+            <a href="https://github.com/letslego/insurance-agent-skills/blob/main/skills/claims/intake-and-triage/SKILL.md">Orchestrator skill</a>
+          </p>
+        </div>
+      </article>
+
       <div class="workflow-grid">
         <article>
-          <h3>New claim</h3>
-          <p><code>/fnol-intake</code> → <code>/coverage-determination</code> → <code>/liability-assessment</code> / <code>/severity-triage</code> → <code>/claims-status-update</code></p>
+          <h3>New claim (manual chain)</h3>
+          <p><code>/fnol-intake</code> → <code>/coverage-determination</code> → <code>/fraud-red-flags</code> → <code>/severity-triage</code> → <code>/handoff-brief</code></p>
         </article>
         <article>
           <h3>Angry or shopping customer</h3>

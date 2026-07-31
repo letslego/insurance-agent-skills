@@ -1,0 +1,3 @@
+interface:
+  display_name: "Intake And Triage"
+  short_description: "FNOL → coverage → fraud → route/escalate"

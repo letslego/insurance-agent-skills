@@ -6,12 +6,12 @@
 <p align="center">
   <a href="https://letslego.github.io/insurance-agent-skills/"><img src="https://img.shields.io/badge/docs-GitHub%20Pages-0B3D5C?style=flat-square" alt="Docs" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-2F6F6A?style=flat-square" alt="MIT" /></a>
-  <a href="https://github.com/letslego/insurance-agent-skills"><img src="https://img.shields.io/badge/skills-39-C45C26?style=flat-square" alt="39 skills" /></a>
+  <a href="https://github.com/letslego/insurance-agent-skills"><img src="https://img.shields.io/badge/skills-40-C45C26?style=flat-square" alt="40 skills" /></a>
 </p>
 
 # Insurance Agent Skills
 
-Thirty-nine installable agent skills for carriers and agencies — built for personal-lines and commercial insurance desks.
+Forty installable agent skills for carriers and agencies — built for personal-lines and commercial insurance desks.
 
 Works with **Claude Code**, **Codex**, **Cursor**, and any [Agent Skills](https://agentskills.io/) harness.
 
@@ -117,6 +117,7 @@ Or clone the repo and point your harness at `skills/`.
 ### Claims
 | Skill | Command | Purpose |
 |-------|---------|---------|
+| Intake & Triage | `/intake-and-triage` | Orchestrates FNOL → coverage → fraud → route/escalate |
 | FNOL Intake | `/fnol-intake` | Complete first notice of loss |
 | Coverage Determination | `/coverage-determination` | Facts → coverage posture |
 | Liability Assessment | `/liability-assessment` | Fault / comparative negligence |
